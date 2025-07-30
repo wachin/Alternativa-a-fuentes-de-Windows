@@ -1,4 +1,6 @@
 # Alternativa a fuentes tipográficas privativas de microsoft
+Este tutorial es para instalar fuentes gratuitas en Linux que sean una alternativa a las fuentes tipográficas privativas de microsoft, algunas de ellas se las puede encontrar en los repositorios de Linux o en Google Fonts y otros
+
 La siguiente es una tabla donde están indicandos los usos típicos en documentos de fuentes tipográficas alternativas a las privativas de microsoft:
 
 
@@ -33,90 +35,89 @@ sudo apt install fonts-liberation fonts-freefont-ttf fonts-crosextra-carlito \
     fonts-jetbrains-mono fonts-ebgaramond fonts-ebgaramond-extra \
     fonts-hack fonts-inconsolata fonts-uralic \
     fonts-urw-base35 fonts-bpg-georgian fonts-comic-neue \
-    fonts-goudybookletter fonts-ibm-plex 
+    fonts-goudybookletter fonts-ibm-plex
 ```
 
 Entre las que se intalan, hay algunos paquetes que instalan varias fuentes con diferentes tipos y diferentes nombres:
 
-**fonts-liberation =** Liberation Sans, Liberation Serif
-**fonts-freefont-ttf =** FreeMono
-**fonts-crosextra-carlito** = carlito
-**fonts-crosextra-caladea** = caladea
-**fonts-dejavu =** DejaVu Sans, DejaVu Sans Mono
-**fonts-cantarell =** Cantarell
-**fonts-ebgaramond =** EB Garamond (08, 12) 
-**fonts-ebgaramond-extra =** EB Garamond SC (08, 12), EB Garamond 12 All SC
-**fonts-ibm-plex =** IBM Plex Sans, IBM plex Serif, IBM plex Mono
-**fonts-hack =** Hack
-**fonts-inconsolata =** Inconsolata
-**fonts-urw-base35 =** Nimbus Roman, Nimbus Sans, URW Gothic, URW Bookman, C059, P052
-**fonts-comic-neue =** Comic Neue
-**fonts-goudybookletter =** Goudy Bookletter 1911
+**fonts-liberation =** Liberation Sans, Liberation Serif  
+**fonts-freefont-ttf =** FreeMono  
+**fonts-crosextra-carlito** = carlito  
+**fonts-crosextra-caladea** = caladea  
+**fonts-dejavu =** DejaVu Sans, DejaVu Sans Mono  
+**fonts-cantarell =** Cantarell  
+**fonts-ebgaramond =** EB Garamond (08, 12)   
+**fonts-ebgaramond-extra =** EB Garamond SC (08, 12), EB Garamond 12 All SC  
+**fonts-ibm-plex =** IBM Plex Sans, IBM plex Serif, IBM plex Mono  
+**fonts-hack =** Hack  
+**fonts-inconsolata =** Inconsolata  
+**fonts-urw-base35 =** Nimbus Roman, Nimbus Sans, URW Gothic, URW Bookman, C059, P052  
+**fonts-comic-neue =** Comic Neue  
+**fonts-goudybookletter =** Goudy Bookletter 1911  
 
 ---
 
-## 📌 Instalación manual desde Google Fonts
+## 📌 Instalación manual desde Google Fonts  
 Algunas fuentes no están en los repositorios, pero puedes descargarlas desde [Google Fonts](https://fonts.google.com/):  
 1. Busca la fuente y descárgala (`.zip` con archivos `.ttf` o `.otf`).  
 
-**Slavo 27px → Alternativa a Rockwell**
-[https://fonts.google.com/specimen/Slabo+27px](https://fonts.google.com/specimen/Slabo+27px)
+**Slavo 27px → Alternativa a Rockwell**  
+[https://fonts.google.com/specimen/Slabo+27px](https://fonts.google.com/specimen/Slabo+27px)  
 
-**EB Garamond → Alternativa a Garamond**
-https://fonts.google.com/specimen/EB+Garamond
+**EB Garamond → Alternativa a Garamond**  
+https://fonts.google.com/specimen/EB+Garamond  
 
-**Libre Franklin → Alternativa a  Franklin Gothic**
-[https://fonts.google.com/specimen/Libre+Franklin](https://fonts.google.com/specimen/Libre+Franklin)
+**Libre Franklin → Alternativa a  Franklin Gothic**    
+[https://fonts.google.com/specimen/Libre+Franklin](https://fonts.google.com/specimen/Libre+Franklin)  
 
-**Oswald → Alternativa a Impact**  
-[https://fonts.google.com/specimen/Oswald](https://fonts.google.com/specimen/Oswald)
+**Oswald → Alternativa a Impact**   
+[https://fonts.google.com/specimen/Oswald](https://fonts.google.com/specimen/Oswald)  
 
-**Anton → Alternativa a Impact**
-[https://fonts.google.com/specimen/Anton](https://fonts.google.com/specimen/Anton)
+**Anton → Alternativa a Impact**  
+[https://fonts.google.com/specimen/Anton](https://fonts.google.com/specimen/Anton)  
 
-**Arvo → Alternativa a Rockwell**
-[https://fonts.google.com/specimen/Arvo](https://fonts.google.com/specimen/Arvo)
+**Arvo → Alternativa a Rockwell**  
+[https://fonts.google.com/specimen/Arvo](https://fonts.google.com/specimen/Arvo)  
 
-**Source Serif 4 → Alternativa a Georgia**
-[https://fonts.google.com/specimen/Source+Serif+4](https://fonts.google.com/specimen/Source+Serif+4)
+**Source Serif 4 → Alternativa a Georgia**  
+[https://fonts.google.com/specimen/Source+Serif+4](https://fonts.google.com/specimen/Source+Serif+4)  
 
-**Lato → Alternativa a Calibri**
-[https://fonts.google.com/specimen/Lato](https://fonts.google.com/specimen/Lato)
+**Lato → Alternativa a Calibri**  
+[https://fonts.google.com/specimen/Lato](https://fonts.google.com/specimen/Lato)  
 
-**Cambo**
-https://fonts.google.com/specimen/Cambo
+**Cambo**  
+https://fonts.google.com/specimen/Cambo  
 
-**Fira Sans**
-https://fonts.google.com/specimen/Fira+Sans
+**Fira Sans**  
+https://fonts.google.com/specimen/Fira+Sans  
 
-**Victor Mono → Alternativa a Consolas**
-https://fonts.google.com/specimen/Victor+Mono
+**Victor Mono → Alternativa a Consolas**  
+https://fonts.google.com/specimen/Victor+Mono  
 
-**Fragment Mono → Alternativa a Consolas**
-https://fonts.google.com/specimen/Fragment+Mono
+**Fragment Mono → Alternativa a Consolas**  
+https://fonts.google.com/specimen/Fragment+Mono  
 
-**Gelasio → Alternativa a Georgia**
-https://fonts.google.com/specimen/Gelasio
+**Gelasio → Alternativa a Georgia**  
+https://fonts.google.com/specimen/Gelasio  
 
-**Signika**
-https://fonts.google.com/specimen/Signika
+**Signika**  
+https://fonts.google.com/specimen/Signika  
 
-**Iosevka → Alternativa a Consolas**
-[https://github.com/be5invis/Iosevka/releases](https://github.com/be5invis/Iosevka/releases)
-Ejemplo de archivo zip que contiene las fuentes en .ttf:
-[https://github.com/be5invis/Iosevka/releases/download/v32.5.0/PkgTTF-Iosevka-32.5.0.zip](https://github.com/be5invis/Iosevka/releases/download/v32.5.0/PkgTTF-Iosevka-32.5.0.zip)
+**Iosevka → Alternativa a Consolas**  
+[https://github.com/be5invis/Iosevka/releases](https://github.com/be5invis/Iosevka/releases)  
+Ejemplo de archivo zip que contiene las fuentes en .ttf:  
+[https://github.com/be5invis/Iosevka/releases/download/v32.5.0/PkgTTF-Iosevka-32.5.0.zip](https://github.com/be5invis/Iosevka/releases/download/v32.5.0/PkgTTF-Iosevka-32.5.0.zip)  
 
-### Cómo instalar las fuentes de Fonts Google u otros en Linux
-2. Extrae los archivos en `~/.fonts/` (para usuario actual) o en `/usr/share/fonts/` (para todos los usuarios).  
-3. Para que el programa en el que está usando las fuentes pueda reconocer las nuevas instaladas, debe cerrar el programa y volverlo a abrir si lo tenía abierto, ejemplo WPS Office, LibreOffice, Inkscape, Gimp, etc
-
+### Cómo instalar las fuentes de Fonts Google u otros en Linux  
+2. Extrae los archivos en `~/.fonts/` (para usuario actual) o en `/usr/share/fonts/` (para todos los usuarios).    
+3. Para que el programa en el que está usando las fuentes pueda reconocer las nuevas instaladas, debe cerrar el programa y volverlo a abrir si lo tenía abierto, ejemplo WPS Office, LibreOffice, Inkscape, Gimp, etc.  
 
 ### Cuándo es necesario refrescar el caché de las fuentes
-Desde que recuerdo en Linux (Ejemplo los que he probado extensamente: Ubuntu, MX Linux, Escuelas Linux) cuando yo instalo alguna fuente tipográfica para usarla en libreoffice, WPS Office, Inkscape, Gimp, u otro, después de instalarla, cuando cierro y abro otra vez el programa ya aparece lista para usar. Pero encontrado en varias páginas web la indicación de que hay que actualizar la caché con:
+Desde que recuerdo en Linux (Ejemplo los que he probado extensamente: Ubuntu, MX Linux, Escuelas Linux) cuando yo instalo alguna fuente tipográfica para usarla en libreoffice, WPS Office, Inkscape, Gimp, u otro, después de instalarla, cuando cierro y abro otra vez el programa ya aparece lista para usar. Pero encontrado en varias páginas web la indicación de que hay que actualizar la caché con:  
 
 fc-cache -fv
 
-yo nunca lo he usado### ¿Es necesario ejecutar `fc-cache -fv` tras instalar una fuente en Debian 12?
+yo nunca lo he usado### ¿Es necesario ejecutar `fc-cache -fv` tras instalar una fuente en Debian 12?  
 
 **No necesariamente**, y te explico por qué:
 
@@ -149,8 +150,6 @@ LibreOffice, al reiniciarse, vuelve a cargar las fuentes disponibles a través d
 * El comando es útil en situaciones específicas, pero no obligatorio en el flujo normal para usuarios de escritorio como tú.
 
 ---
-
-¡Perfectamente comprensible! De hecho, eso refleja muy bien cómo ha evolucionado la organización de archivos en GNU/Linux en los últimos años.
 
 ### 📜 Un poco de historia
 
