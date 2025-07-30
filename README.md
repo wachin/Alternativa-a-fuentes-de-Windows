@@ -242,7 +242,7 @@ Durante mucho tiempo, el lugar "de facto" para instalar fuentes a nivel de usuar
 
 * `~/.fonts` (es decir, una carpeta `.fonts` en tu directorio personal)
 
-Este método funcionaba bien y era el más documentado en distros como Debian, Ubuntu, etc., desde antes de 2010. Muchos tutoriales antiguos (y aún varios actuales) siguen recomendando esta ruta.
+Este método funcionaba bien y era el más documentado en distros como Debian, Ubuntu, etc., desde antes de 2010. Muchos tutoriales antiguos (y aún varios actuales 2025) siguen recomendando esta ruta.
 
 ---
 
