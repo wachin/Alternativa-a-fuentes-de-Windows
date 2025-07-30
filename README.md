@@ -57,9 +57,10 @@ Entre las que se intalan, hay algunos paquetes que instalan varias fuentes con d
 
 ---
 
-## 📌 Instalación manual desde Google Fonts  
-Algunas fuentes no están en los repositorios, pero puedes descargarlas desde [Google Fonts](https://fonts.google.com/):  
-1. Busca la fuente y descárgala (`.zip` con archivos `.ttf` o `.otf`).  
+## 📌 Fuentes alternativas desde Google Fonts  
+Algunas fuentes no están en los repositorios, están en este repositorio, pero puedes descargarlas manualmente desde [Google Fonts](https://fonts.google.com/):  
+
+Busca la fuente y descárgala (`.zip` con archivos `.ttf` o `.otf`).  
 
 **Slavo 27px → Alternativa a Rockwell**  
 [https://fonts.google.com/specimen/Slabo+27px](https://fonts.google.com/specimen/Slabo+27px)  
@@ -86,44 +87,143 @@ https://fonts.google.com/specimen/EB+Garamond
 [https://fonts.google.com/specimen/Lato](https://fonts.google.com/specimen/Lato)  
 
 **Cambo**  
-https://fonts.google.com/specimen/Cambo  
+[https://fonts.google.com/specimen/Cambo](https://fonts.google.com/specimen/Cambo)    
 
 **Fira Sans**  
-https://fonts.google.com/specimen/Fira+Sans  
+[https://fonts.google.com/specimen/Fira+Sans](https://fonts.google.com/specimen/Fira+Sans)    
 
 **Victor Mono → Alternativa a Consolas**  
-https://fonts.google.com/specimen/Victor+Mono  
+[https://fonts.google.com/specimen/Victor+Mono](https://fonts.google.com/specimen/Victor+Mono)  
 
 **Fragment Mono → Alternativa a Consolas**  
-https://fonts.google.com/specimen/Fragment+Mono  
+[https://fonts.google.com/specimen/Fragment+Mono](https://fonts.google.com/specimen/Fragment+Mono)  
 
 **Gelasio → Alternativa a Georgia**  
-https://fonts.google.com/specimen/Gelasio  
+[https://fonts.google.com/specimen/Gelasio](https://fonts.google.com/specimen/Gelasio)  
 
 **Signika**  
-https://fonts.google.com/specimen/Signika  
+[https://fonts.google.com/specimen/Signika](https://fonts.google.com/specimen/Signika)  
 
 **Iosevka → Alternativa a Consolas**  
 [https://github.com/be5invis/Iosevka/releases](https://github.com/be5invis/Iosevka/releases)  
-Ejemplo de archivo zip que contiene las fuentes en .ttf:  
+El siguiente enlace es un ejemplo del archivo zip que contiene las fuentes en .ttf:  
 [https://github.com/be5invis/Iosevka/releases/download/v32.5.0/PkgTTF-Iosevka-32.5.0.zip](https://github.com/be5invis/Iosevka/releases/download/v32.5.0/PkgTTF-Iosevka-32.5.0.zip)  
 
-### Cómo instalar las fuentes de Fonts Google u otros en Linux  
-2. Extrae los archivos en `~/.fonts/` (para usuario actual) o en `/usr/share/fonts/` (para todos los usuarios).    
-3. Para que el programa en el que está usando las fuentes pueda reconocer las nuevas instaladas, debe cerrar el programa y volverlo a abrir si lo tenía abierto, ejemplo WPS Office, LibreOffice, Inkscape, Gimp, etc.  
+# Instalación de fuentes tipográficas de Windows en Linux
 
-### Cuándo es necesario refrescar el caché de las fuentes
-Desde que recuerdo en Linux (Ejemplo los que he probado extensamente: Ubuntu, MX Linux, Escuelas Linux) cuando yo instalo alguna fuente tipográfica para usarla en libreoffice, WPS Office, Inkscape, Gimp, u otro, después de instalarla, cuando cierro y abro otra vez el programa ya aparece lista para usar. Pero encontrado en varias páginas web la indicación de que hay que actualizar la caché con:  
+En muchas guías antiguas se recomienda copiar las fuentes de Windows a la carpeta personal `~/.fonts`.  
+Esto **sigue siendo funcional en 2025**, pero el archivo de configuración de Fontconfig en Debian 12:
 
-fc-cache -fv
+/etc/fonts/fonts.conf
 
-yo nunca lo he usado### ¿Es necesario ejecutar `fc-cache -fv` tras instalar una fuente en Debian 12?  
+indica claramente:
 
-**No necesariamente**, y te explico por qué:
+```xml
+<dir prefix="xdg">fonts</dir>
+<!-- the following element will be removed in the future -->
+<dir>~/.fonts</dir>
+```
+![](vx_images/338398966727171.png)
 
----
 
-### ✅ Lo que sucede cuando instalas una fuente:
+Esto significa que `~/.fonts` **será removida en el futuro**, y la ubicación recomendada según el estándar **XDG Base Directory** es:
+
+```
+~/.local/share/fonts
+```
+
+Por lo tanto, si instalas fuentes solo para tu usuario, es mejor usar esa ruta recomendada para ya ir acostumbrandose
+
+## Instalación de fuentes para todo el sistema
+
+Si el equipo tiene **varios usuarios** y todos necesitan las fuentes de Windows, se deben instalar **para todo el sistema**.
+
+### ¿Dónde van las fuentes del sistema?
+
+Las fuentes del sistema en Linux se guardan en:
+
+/usr/share/fonts/truetype/
+
+Podemos crear una carpeta nueva, por ejemplo:
+
+/usr/share/fonts/truetype/windows
+
+y dentro de ella pegar todas las fuentes de Windows.
+
+## ¿Cómo copiar las fuentes sin usar la terminal?
+
+Para mover archivos a esa carpeta necesitamos permisos de administrador. Hay varias formas de hacerlo gráficamente:
+
+### 1. Usando **Krusader**
+
+1.) Instalar Krusader (si no lo tiene):
+
+```bash
+sudo apt install krusader
+```
+
+2.) Ejecutar Krusader como superusuario:
+
+```bash
+sudo krusader
+```
+
+3.) Navegar a la carpeta donde tienes las fuentes de Windows y copiarlas.
+4.)Abrir una pestaña con `Ctrl + T` e ir a `/usr/share/fonts/truetype/`, crear la carpeta `windows` y pegar allí las fuentes.
+   *(También puedes hacerlo usando el otro panel en lugar de crear una pestaña).*
+
+### 2. Usando **Double Commander (GTK o QT)**
+
+1.) Instalar Double Commander:
+
+```bash
+sudo apt install doublecmd-gtk
+```
+
+o si usas KDE Plasma o LXQT:
+
+```bash
+sudo apt install doublecmd-qt
+```
+
+2.) Ejecutar Double Commander con permisos de superusuario:
+
+```bash
+sudo doublecmd-gtk
+```
+
+o:
+
+```bash
+sudo doublecmd-qt
+```
+
+3.) Copiar las fuentes a `/usr/share/fonts/truetype/windows`.
+
+## Consejos para usar el administrador de archivos como superusuario
+
+* **Tenga mucho cuidado** de no borrar ni mover carpetas o archivos del sistema operativo. Si elimina o mueve algo crítico, el sistema puede dejar de funcionar y podría ser necesario reinstalarlo.
+* **No abra sus archivos personales (imágenes, documentos, etc.)** desde el administrador de archivos ejecutado como superusuario.
+  Esto se debe a que el programa que abre esos archivos puede heredar permisos de superusuario y cambiar la propiedad de los mismos, provocando que luego no pueda acceder a ellos desde su usuario normal.
+* **Cierre el administrador de archivos cuando termine de usarlo como superusuario.**
+  Dejarlo abierto puede ser peligroso porque, al volver más tarde y olvidar que sigue con permisos de administrador, podría borrar o mover algo importante sin darse cuenta.
+
+## Actualizar el caché de fuentes (opcional)
+
+Después de copiar las fuentes, se recomienda actualizar el caché de fuentes:
+
+```bash
+sudo fc-cache -fv
+```
+
+### 🔁 ¿Cuándo sí se necesita `fc-cache -fv`?
+
+1. **Cuando instalas fuentes en directorios no estándar**, como uno que creaste manualmente o no es reconocido automáticamente.
+2. **Cuando haces scripts automatizados o instalaciones sin sesión gráfica activa**, por ejemplo en servidores o instalaciones masivas.
+3. **Cuando un programa específico no detecta la fuente nueva**, a pesar de reiniciarlo.
+4. **Cuando tienes problemas con fuentes corruptas, cache antigua o conflictos**, y necesitas regenerar toda la caché de fuentes.
+
+### ✅ RESUMEN
 
 Cuando instalas una fuente en directorios estándar como:
 
@@ -135,21 +235,6 @@ el sistema detecta automáticamente los archivos `.ttf`, `.otf`, etc. La mayorí
 
 LibreOffice, al reiniciarse, vuelve a cargar las fuentes disponibles a través de `fontconfig`, por eso ya te aparecen sin hacer nada.
 
----
-
-### 🔁 ¿Cuándo sí se necesita `fc-cache -fv`?
-
-1. **Cuando instalas fuentes en directorios no estándar**, como uno que creaste manualmente o no es reconocido automáticamente.
-2. **Cuando haces scripts automatizados o instalaciones sin sesión gráfica activa**, por ejemplo en servidores o instalaciones masivas.
-3. **Cuando un programa específico no detecta la fuente nueva**, a pesar de reiniciarlo.
-4. **Cuando tienes problemas con fuentes corruptas, cache antigua o conflictos**, y necesitas regenerar toda la caché de fuentes.
-
-### 🧠 Conclusión
-
-* **Si tras instalar la fuente y reiniciar LibreOffice te aparece sin problemas, no necesitas correr `fc-cache -fv`.**
-* El comando es útil en situaciones específicas, pero no obligatorio en el flujo normal para usuarios de escritorio como tú.
-
----
 
 ### 📜 Un poco de historia
 
@@ -173,44 +258,6 @@ A partir de las **especificaciones de XDG** (X Desktop Group), las distribucione
   ```
 
 Este cambio fue adoptado gradualmente, y **`fontconfig` desde versiones modernas (como la que trae Debian 12)** reconoce y monitorea automáticamente esa ruta como válida para fuentes.
-
----
-
-### 📌 En resumen:
-
-| Ruta                   | Estado actual                    | Comentario                                             |
-| ---------------------- | -------------------------------- | ------------------------------------------------------ |
-| `~/.fonts`             | **Obsoleto, pero funcional**     | Aún funciona en muchas distros por retrocompatibilidad |
-| `~/.local/share/fonts` | **Recomendado**                  | Según el estándar XDG                                  |
-| `/usr/share/fonts`     | **Sistema (todos los usuarios)** | Necesita permisos de root                              |
-
----
-
-### ✅ ¿Qué ruta deberías usar hoy?
-
-* Si **solo tú** usarás la fuente, y quieres seguir las prácticas modernas:
-  → Usa `~/.local/share/fonts`
-
-* Si quieres mantener compatibilidad con sistemas antiguos o scripts:
-  → `~/.fonts` aún es aceptable.
-
----
-
-¿Te gustaría que te dé un pequeño script para instalar fuentes en `~/.local/share/fonts` con comprobación automática?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Cómo instalar Fuentes TrueType de Windows en Linux
@@ -267,14 +314,12 @@ La mayoría de las fuentes que has copiado desde Windows 10 **funcionarán en Li
 
 ---
 
-
-
-### 4. Verificación:
+### 3. Verificación:
    - Usa herramientas como `gnome-font-viewer`,  `fontmatrix` o `font-manager` para confirmar que las fuentes se reconocen.
   
 ---
 
-### 5. Notas adicionales:
+### 4. Notas adicionales:
    - **Licencias**: Algunas fuentes de Windows (como Calibri, Cambria, Segoe UI) son propiedad de Microsoft.
    - **Fuentes TTC**: Si necesitas extraer fuentes individuales de un archivo `.ttc`, instala `fontforge`:
      ```bash
@@ -289,22 +334,10 @@ La mayoría de las fuentes que has copiado desde Windows 10 **funcionarán en Li
 - **No funcionarán**: Los archivos `.fon`
 - **Recomendación**: Elimina los archivos `.fon` y usa las fuentes TTF/OTF restantes.
 
-
    - Luego actualiza la caché de fuentes con:
     ```bash
     fc-cache -fv
     ```
----
-
-### 📌 Verificar que las fuentes están instaladas
-Después de instalar, puedes comprobar si una fuente está disponible con:  
-```bash
-fc-list | grep "NombreFuente"
-```
-Por ejemplo, para verificar **Carlito**:  
-```bash
-fc-list | grep "Carlito"
-```
 ---
 
 ### 📌 Opcional: Instalar una GUI para gestionar fuentes
@@ -337,8 +370,19 @@ este número es un ejemplo y depende de cómo se vean las fuentes en tu monitor.
 ### Consejos adicionales:
 - Si compartes documentos con usuarios de Windows sólo usa fuentes de Windows para asegurarte que se abran en otro ordenador, ejemplo cuando una persona está haciendo una tesis y debe compartir archivos con otros estudiantes, o cuando vas a hacer imprimir algún archivo de diseño gráfico como puede ser un .svg convertido en pdf y lo lleves a hacer imprimir a una imprenta. O cualquier archivo que lo vayas a habrir en otro ordenador cerciorate que la fuente esté allí también o llevala en un pendrive e instalalas en ese ordenador para que se puedan visualizar.
 
-
 # Referencias
 
-Linux Font Equivalents to Popular Web Typefaces | Jon Christopher  
-https://jonchristopher.us/blog/linux-font-equivalents-to-popular-web-typefaces/  
+**Linux Font Equivalents to Popular Web Typefaces | Jon Christopher**  
+[https://jonchristopher.us/blog/linux-font-equivalents-to-popular-web-typefaces/ ](https://jonchristopher.us/blog/linux-font-equivalents-to-popular-web-typefaces/) 
+
+**How do I install fonts?**  
+[how-do-i-install-fonts](https://askubuntu.com/questions/3697/how-do-i-install-fonts)
+
+**Añadir una tipografía adicional para usuarios individuales**  
+[fonts-user.html.es](https://help.gnome.org/admin/system-admin-guide/stable/fonts-user.html.es)  
+
+**Font configuration (Español)**  
+[Font_configuration_%28Español%29](https://wiki.archlinux.org/title/Font_configuration_%28Español%29)
+
+
+
