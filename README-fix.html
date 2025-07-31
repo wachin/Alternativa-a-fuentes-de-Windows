@@ -17,7 +17,7 @@ microsoft:</p>
 <thead>
 <tr class="header" style="background-color: #fcebea;">
 <th style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;"><strong>Fuente de Windows</strong></th>
-<th style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;"><strong>Alternativa de Software Libre</strong></th>
+<th style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;"><strong>Alternativas no privativas</strong></th>
 <th style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;"><strong>Uso Común en Documentos</strong></th>
 <th style="border: 1px solid #333333; padding: 8px; text-align: left; white-space: normal; word-break: normal; overflow-wrap: break-word;"><strong>Notas</strong></th>
 </tr>
@@ -216,8 +216,8 @@ https://fonts.google.com/specimen/EB+Garamond</p>
 El siguiente enlace es un ejemplo del archivo zip que contiene las
 fuentes en .ttf:<br/>
 <a href="https://github.com/be5invis/Iosevka/releases/download/v32.5.0/PkgTTF-Iosevka-32.5.0.zip">https://github.com/be5invis/Iosevka/releases/download/v32.5.0/PkgTTF-Iosevka-32.5.0.zip</a></p>
-<h1 id="instalación-de-fuentes-tipográficas-de-windows-en-linux">Instalación
-de fuentes tipográficas de Windows en Linux</h1>
+<h1 id="instalación-de-fuentes-tipográficas-en-linux">Instalación de
+fuentes tipográficas en Linux</h1>
 <p>En muchas guías antiguas se recomienda copiar las fuentes de Windows
 a la carpeta personal <code>~/.fonts</code>.<br/>
 Esto <strong>sigue siendo funcional en 2025</strong>, pero el archivo de
@@ -234,6 +234,63 @@ futuro</strong>, y la ubicación recomendada según el estándar
 <pre><code>~/.local/share/fonts</code></pre>
 <p>Por lo tanto, si instalas fuentes solo para tu usuario, es mejor usar
 esa ruta recomendada para ya ir acostumbrandose</p>
+<h2 id="instalar-fuentes-solo-para-tu-usuario-sin-tocar-el-sistema">Instalar
+fuentes solo para tu usuario (sin tocar el sistema)</h2>
+<p>Para instalar fuentes tipográficas solo para tu cuenta de usuario,
+puedes guardarlas en la carpeta recomendada:</p>
+<pre><code>~/.local/share/fonts</code></pre>
+<blockquote>
+<p><strong>Nota:</strong> El símbolo <code>~</code> representa tu
+carpeta personal (por ejemplo: <code>/home/tuusuario/</code>).</p>
+</blockquote>
+<h3 id="crear-la-carpeta-automáticamente-método-rápido">1. Crear la
+carpeta automáticamente (método rápido)</h3>
+<p>Abre una terminal y escribe el siguiente comando:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.local/share/fonts</span></code></pre></div>
+<p>Este comando crea toda la ruta necesaria.</p>
+<ul>
+<li>La opción <code>-p</code> hace que <strong>se creen las carpetas que
+falten</strong> sin dar errores si ya existen.</li>
+</ul>
+<h3 id="crear-la-carpeta-manualmente-sin-usar-la-terminal">2. Crear la
+carpeta manualmente (sin usar la terminal)</h3>
+<p>Si prefieres hacerlo de forma gráfica:</p>
+<ol type="1">
+<li><p>Abre tu <strong>administrador de archivos</strong>.<br/>
+</p></li>
+<li><p>Presiona <code>Ctrl + H</code> para mostrar las <strong>carpetas
+ocultas</strong> (en Linux las carpetas que empiezan con un punto
+<code>.</code> son ocultas).<br/>
+</p></li>
+<li><p>Si no existe la carpeta <code>.local</code>, créala:</p>
+<ul>
+<li>Clic derecho → <strong>Crear carpeta</strong> → escribir
+<code>.local</code><br/>
+</li>
+</ul></li>
+<li><p>Dentro de <code>.local</code>, crea otra carpeta llamada
+<code>share</code>.<br/>
+</p></li>
+<li><p>Dentro de <code>share</code>, crea otra carpeta llamada
+<code>fonts</code>.</p></li>
+</ol>
+<p>La ruta final debe quedar así:</p>
+<pre><code>/home/tuusuario/.local/share/fonts</code></pre>
+<h3 id="copiar-las-fuentes">3. Copiar las fuentes</h3>
+<p>Copia todos los archivos de fuentes de Windows (<code>.ttf</code> o
+<code>.otf</code>) y pégalos en esa carpeta. Puedes crear subcarpetas
+dentro de <code>fonts</code> si quieres organizar tus fuentes (por
+ejemplo: <code>windows</code>, <code>personales</code>, etc.).</p>
+<hr/>
+<h3 id="ventajas-de-este-método">Ventajas de este método</h3>
+<ul>
+<li>No necesitas permisos de administrador.</li>
+<li>Las fuentes se aplican solo a tu usuario (otros usuarios del sistema
+no las verán).</li>
+<li>Es la forma recomendada actualmente (la carpeta antigua
+<code>~/.fonts</code> sigue funcionando, pero está marcada para
+eliminarse en el futuro).</li>
+</ul>
 <h2 id="instalación-de-fuentes-para-todo-el-sistema">Instalación de
 fuentes para todo el sistema</h2>
 <p>Si el equipo tiene <strong>varios usuarios</strong> y todos necesitan
@@ -246,31 +303,34 @@ sistema?</h3>
 <p>Podemos crear una carpeta nueva, por ejemplo:</p>
 <p>/usr/share/fonts/truetype/windows</p>
 <p>y dentro de ella pegar todas las fuentes de Windows.</p>
-<h2 id="cómo-copiar-las-fuentes-sin-usar-la-terminal">¿Cómo copiar las
-fuentes sin usar la terminal?</h2>
+<h3 id="cómo-copiar-las-fuentes-sin-usar-la-terminal">¿Cómo copiar las
+fuentes sin usar la terminal?</h3>
 <p>Para mover archivos a esa carpeta necesitamos permisos de
 administrador. Hay varias formas de hacerlo gráficamente:</p>
-<h3 id="usando-krusader">1. Usando <strong>Krusader</strong></h3>
-<p>1.) Instalar Krusader (si no lo tiene):</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="fu">sudo</span> apt install krusader</span></code></pre></div>
-<p>2.) Ejecutar Krusader como superusuario:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="fu">sudo</span> krusader</span></code></pre></div>
-<p>3.) Navegar a la carpeta donde tienes las fuentes de Windows y
-copiarlas. 4.)Abrir una pestaña con <code>Ctrl + T</code> e ir a
-<code>/usr/share/fonts/truetype/</code>, crear la carpeta
-<code>windows</code> y pegar allí las fuentes. <em>(También puedes
-hacerlo usando el otro panel en lugar de crear una pestaña).</em></p>
-<h3 id="usando-double-commander-gtk-o-qt">2. Usando <strong>Double
-Commander (GTK o QT)</strong></h3>
-<p>1.) Instalar Double Commander:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a><span class="fu">sudo</span> apt install doublecmd-gtk</span></code></pre></div>
+<h4 id="usando-krusader">1. Usando <strong>Krusader</strong></h4>
+<p><strong>a.)</strong> Instalar Krusader (si no lo tiene):</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="fu">sudo</span> apt install krusader</span></code></pre></div>
+<p><strong>b.)</strong> Ejecutar Krusader como superusuario:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb8-1"><a aria-hidden="true" href="#cb8-1" tabindex="-1"></a><span class="fu">sudo</span> krusader</span></code></pre></div>
+<p><strong>c.)</strong> Navegar a la carpeta donde tienes las fuentes de
+Windows y copiarlas.</p>
+<p><strong>d.)</strong> Abrir una pestaña con <code>Ctrl + T</code> e ir
+a <code>/usr/share/fonts/truetype/</code>, crear la carpeta
+<code>windows</code> y pegar allí las fuentes.<br/>
+<em>(También puedes hacerlo usando el otro panel en lugar de crear una
+pestaña).</em></p>
+<h4 id="usando-double-commander-gtk-o-qt">2. Usando <strong>Double
+Commander (GTK o QT)</strong></h4>
+<p><strong>a.)</strong> Instalar Double Commander:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb9-1"><a aria-hidden="true" href="#cb9-1" tabindex="-1"></a><span class="fu">sudo</span> apt install doublecmd-gtk</span></code></pre></div>
 <p>o si usas KDE Plasma o LXQT:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="fu">sudo</span> apt install doublecmd-qt</span></code></pre></div>
-<p>2.) Ejecutar Double Commander con permisos de superusuario:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb8-1"><a aria-hidden="true" href="#cb8-1" tabindex="-1"></a><span class="fu">sudo</span> doublecmd-gtk</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb10-1"><a aria-hidden="true" href="#cb10-1" tabindex="-1"></a><span class="fu">sudo</span> apt install doublecmd-qt</span></code></pre></div>
+<p><strong>b.)</strong> Ejecutar Double Commander con permisos de
+superusuario:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb11-1"><a aria-hidden="true" href="#cb11-1" tabindex="-1"></a><span class="fu">sudo</span> doublecmd-gtk</span></code></pre></div>
 <p>o:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb9-1"><a aria-hidden="true" href="#cb9-1" tabindex="-1"></a><span class="fu">sudo</span> doublecmd-qt</span></code></pre></div>
-<p>3.) Copiar las fuentes a
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb12-1"><a aria-hidden="true" href="#cb12-1" tabindex="-1"></a><span class="fu">sudo</span> doublecmd-qt</span></code></pre></div>
+<p><strong>c.)</strong> Copiar las fuentes a
 <code>/usr/share/fonts/truetype/windows</code>.</p>
 <h2 id="consejos-para-usar-el-administrador-de-archivos-como-superusuario">Consejos
 para usar el administrador de archivos como superusuario</h2>
@@ -294,7 +354,10 @@ podría borrar o mover algo importante sin darse cuenta.</li>
 fuentes (opcional)</h2>
 <p>Después de copiar las fuentes, se recomienda actualizar el caché de
 fuentes:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb10-1"><a aria-hidden="true" href="#cb10-1" tabindex="-1"></a><span class="fu">sudo</span> fc-cache <span class="at">-fv</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb13-1"><a aria-hidden="true" href="#cb13-1" tabindex="-1"></a><span class="fu">sudo</span> fc-cache <span class="at">-fv</span></span></code></pre></div>
+<h3 id="verificar-la-instalación">Verificar la instalación</h3>
+<p>Abre un programa como LibreOffice, GIMP o Inkscape y revisa si
+aparecen las fuentes recién agregadas.</p>
 <h3 id="cuándo-sí-se-necesita-fc-cache--fv">🔁 ¿Cuándo sí se necesita
 <code>fc-cache -fv</code>?</h3>
 <ol type="1">
@@ -343,125 +406,21 @@ aún varios actuales 2025) siguen recomendando esta ruta.</p>
 Group), las distribuciones comenzaron a migrar a una estructura más
 estandarizada para los archivos de usuario. En esa estructura:</p>
 <ul>
-<li><p>Los datos del usuario se almacenan en
-<code>~/.local/share/</code></p></li>
-<li><p>Por tanto, las <strong>fuentes por usuario</strong> se instalan
-en:</p>
-<pre><code>~/.local/share/fonts</code></pre></li>
+<li>Los datos del usuario se almacenan en
+<code>~/.local/share/</code></li>
+<li>Por tanto, las <strong>fuentes por usuario</strong> se instalan
+en:</li>
 </ul>
+<pre><code>~/.local/share/fonts</code></pre>
 <p>Este cambio fue adoptado gradualmente, y
 <strong><code>fontconfig</code> desde versiones modernas (como la que
 trae Debian 12)</strong> reconoce y monitorea automáticamente esa ruta
 como válida para fuentes.</p>
-<h2 id="cómo-instalar-fuentes-truetype-de-windows-en-linux">Cómo
-instalar Fuentes TrueType de Windows en Linux</h2>
-<p>Si tienes una copia de Windows puedes entrar en la sesión de Windows
-y copiar las fuentes ubicadas en:</p>
-<p><code>C:\Windows\Fonts</code></p>
-<p>y pegarlas en un pendrive una carpeta creada con tal fin.</p>
-<p>También si tienes Dual Boot o si usas un Pendrive con Linux portable
-puedes Inicia sesión en Linux y Copia los archivos de fuentes
-(<code>.ttf</code>) desde <code>C:\Windows\Fonts</code></p>
-<ul>
-<li>Luego <strong>Crea un directorio para las fuentes</strong> (por
-ejemplo, en tu home) Para ver los archivos ocultos usa Ctrl + H para ver
-los archivos ocultos:</li>
-</ul>
-<p>.fonts/windows_fonts</p>
-<p>esto para el usuario actual</p>
-<p>o</p>
-<p><code>/usr/share/fonts/windows_fonts</code></p>
-<p>para todos los usuarios, pero deberás hacer esto como
-superusuario</p>
-<ul>
-<li><strong>Copia todos los archivos TTF, OTF y TTC</strong></li>
-</ul>
-<p>puedes hacerlo con tu administrador de archivos favorito como Thunar,
-Nemo, Nautilus, Dolphin, etc</p>
-<ul>
-<li><p><strong>Ignora los archivos <code>.fon</code></strong>, ya que no
-funcionarán, o borralos después.</p></li>
-<li><p><strong>Actualiza la caché de fuentes (opcional)</strong>:
-<code>bash      fc-cache -fv</code> Actualizar la cache es opcional pues
-los programas después de cerrarlos y abrirlos otra vez reconocerán las
-fuentes nuevas.</p></li>
-</ul>
-<hr/>
-<p>La mayoría de las fuentes que has copiado desde Windows 10
-<strong>funcionarán en Linux Debian</strong>, pero hay algunas
-consideraciones importantes según el formato de los archivos:</p>
-<hr/>
-<h3 id="formatos-compatibles-en-linux">1. Formatos compatibles en
-Linux:</h3>
-<ul>
-<li><strong>TTF (TrueType Font)</strong>: Sí, son totalmente
-compatibles.</li>
-<li><strong>OTF (OpenType Font)</strong>: También son compatibles.</li>
-<li><strong>TTC (TrueType Collection)</strong>: Son archivos que
-contienen múltiples fuentes en un solo archivo. Linux puede manejarlos,
-pero a veces requieren herramientas como <code>fontforge</code> para
-extraer las fuentes individuales y que funcionen.</li>
-<li><strong>FON (Windows Bitmap Font)</strong>: <strong>No son
-compatibles directamente</strong>. Son fuentes bitmap antiguas de
-Windows y no funcionarán bien en Linux (ej: <code>app850.fon</code>,
-<code>coure.fon</code>, <code>modern.fon</code>, <code>roman.fon</code>,
-<code>script.fon</code>, <code>smalle.fon</code>,
-<code>sserife.fon</code>, <code>vga850.fon</code>,
-<code>vgafix.fon</code>, <code>vgasys.fon</code>).</li>
-</ul>
-<hr/>
-<h3 id="fuentes-que-no-funcionarán-bien-o-requieren-conversión">2.
-Fuentes que NO funcionarán bien o requieren conversión:</h3>
-<ul>
-<li>Los archivos <code>.fon</code> (como <code>app850.fon</code>,
-<code>coure.fon</code>, etc.) <strong>no son útiles en Linux</strong>.
-Estas fuentes son específicas de Windows y no se renderizan
-correctamente en entornos Linux modernos.</li>
-<li>Algunos archivos <code>.ttc</code> (como <code>cambria.ttc</code>,
-<code>mingliub.ttc</code>, etc.) pueden requerir extracción de sus
-componentes con herramientas como <code>fontforge</code> para usarlos
-individualmente.</li>
-</ul>
-<hr/>
-<h3 id="verificación">3. Verificación:</h3>
-<ul>
-<li>Usa herramientas como <code>gnome-font-viewer</code>,
-<code>fontmatrix</code> o <code>font-manager</code> para confirmar que
-las fuentes se reconocen.</li>
-</ul>
-<hr/>
-<h3 id="notas-adicionales">4. Notas adicionales:</h3>
-<ul>
-<li><strong>Licencias</strong>: Algunas fuentes de Windows (como
-Calibri, Cambria, Segoe UI) son propiedad de Microsoft.</li>
-<li><strong>Fuentes TTC</strong>: Si necesitas extraer fuentes
-individuales de un archivo <code>.ttc</code>, instala
-<code>fontforge</code>:
-<code>bash      sudo apt install fontforge</code> Luego ábrelo, carga el
-<code>.ttc</code> y guárdalas como archivos <code>.ttf</code>
-separados.</li>
-</ul>
-<hr/>
-<h3 id="resumen-1">Resumen:</h3>
-<ul>
-<li><p><strong>Funcionarán</strong>: Todos los archivos
-<code>.ttf</code>, <code>.otf</code> y algunos <code>.ttc</code> (con
-herramientas).</p></li>
-<li><p><strong>No funcionarán</strong>: Los archivos
-<code>.fon</code></p></li>
-<li><p><strong>Recomendación</strong>: Elimina los archivos
-<code>.fon</code> y usa las fuentes TTF/OTF restantes.</p>
-<ul>
-<li>Luego actualiza la caché de fuentes con:</li>
-</ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb12-1"><a aria-hidden="true" href="#cb12-1" tabindex="-1"></a><span class="ex">fc-cache</span> <span class="at">-fv</span></span></code></pre></div>
-<hr/></li>
-</ul>
-<h3 id="opcional-instalar-una-gui-para-gestionar-fuentes">📌 Opcional:
-Instalar una GUI para gestionar fuentes</h3>
+<h2 id="opcional-instalar-una-gui-para-gestionar-fuentes">📌 Opcional:
+Instalar una GUI para gestionar fuentes</h2>
 <p>Si quieres ver, activar o desactivar fuentes fácilmente, instala
 <strong>Fontmatrix</strong>:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb13-1"><a aria-hidden="true" href="#cb13-1" tabindex="-1"></a><span class="fu">sudo</span> apt install fontmatrix</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash" style="background: rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; font-family: 'Ubuntu Mono', Courier, monospace; font-size: medium; line-height: 22.4px; margin: 10px; max-height: 500px; overflow: auto; padding: 28px 10px 10px 20px; z-index: 10000;"><code class="sourceCode bash"><span id="cb15-1"><a aria-hidden="true" href="#cb15-1" tabindex="-1"></a><span class="fu">sudo</span> apt install fontmatrix</span></code></pre></div>
 <p>Luego ábrelo desde el menú y revisa tus fuentes instaladas.</p>
 <p>Si las fuentes no se ven bien, debes configurar las fuentes
 visibles</p>
@@ -472,11 +431,14 @@ visibles</p>
 <p>y pon ejemplo:</p>
 <p><strong>10</strong></p>
 <p>este número es un ejemplo y depende de cómo se vean las fuentes en tu
-monitor. Dda clic en Close y además cierra Fontmatrix y vuelvelo a abrir
-y se verá el cambio:</p>
-<p><a href="https://facilitarelsoftwarelibre.blogspot.com/2025/02/instalar-fontmatrix-y-configurarlo-en-debian-12.html">https://facilitarelsoftwarelibre.blogspot.com/2025/02/instalar-fontmatrix-y-configurarlo-en-debian-12.html</a></p>
+monitor. Da clic en Close y además cierra Fontmatrix y vuelvelo a abrir
+y se verá el cambio</p>
+<p>También puedes ver mi tutorial:</p>
+<p><strong>Instalar FontMatrix y configurarlo en Debian
+12</strong><br/>
+<a href="https://facilitarelsoftwarelibre.blogspot.com/2025/02/instalar-fontmatrix-y-configurarlo-en-debian-12.html">https://facilitarelsoftwarelibre.blogspot.com/2025/02/instalar-fontmatrix-y-configurarlo-en-debian-12.html</a></p>
 <hr/>
-<h3 id="consejos-adicionales">Consejos adicionales:</h3>
+<h2 id="consejos-adicionales">Consejos adicionales</h2>
 <ul>
 <li>Si compartes documentos con usuarios de Windows sólo usa fuentes de
 Windows para asegurarte que se abran en otro ordenador, ejemplo cuando

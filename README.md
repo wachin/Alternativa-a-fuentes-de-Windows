@@ -160,13 +160,13 @@ Este comando crea toda la ruta necesaria.
 
 Si prefieres hacerlo de forma gráfica:
 
-1.) Abre tu **administrador de archivos**.
-2.) Presiona `Ctrl + H` para mostrar las **carpetas ocultas** (en Linux las carpetas que empiezan con un punto `.` son ocultas).
-3.) Si no existe la carpeta `.local`, créala:
+1. Abre tu **administrador de archivos**.  
+2. Presiona `Ctrl + H` para mostrar las **carpetas ocultas** (en Linux las carpetas que empiezan con un punto `.` son ocultas).  
+3. Si no existe la carpeta `.local`, créala:  
 
-   * Clic derecho → **Crear carpeta** → escribir `.local`
-4.) Dentro de `.local`, crea otra carpeta llamada `share`.
-5.) Dentro de `share`, crea otra carpeta llamada `fonts`.
+   * Clic derecho → **Crear carpeta** → escribir `.local`  
+4. Dentro de `.local`, crea otra carpeta llamada `share`.  
+5. Dentro de `share`, crea otra carpeta llamada `fonts`.  
 
 La ruta final debe quedar así:
 
@@ -210,25 +210,26 @@ Para mover archivos a esa carpeta necesitamos permisos de administrador. Hay var
 
 #### 1. Usando **Krusader**
 
-1.) Instalar Krusader (si no lo tiene):
+**a.)** Instalar Krusader (si no lo tiene):  
 
 ```bash
 sudo apt install krusader
 ```
 
-2.) Ejecutar Krusader como superusuario:
+**b.)** Ejecutar Krusader como superusuario:  
 
 ```bash
 sudo krusader
 ```
 
-3.) Navegar a la carpeta donde tienes las fuentes de Windows y copiarlas.
-4.)Abrir una pestaña con `Ctrl + T` e ir a `/usr/share/fonts/truetype/`, crear la carpeta `windows` y pegar allí las fuentes.
+**c.)** Navegar a la carpeta donde tienes las fuentes de Windows y copiarlas.  
+
+**d.)** Abrir una pestaña con "`Ctrl + T`" e ir a "`/usr/share/fonts/truetype/`", crear la carpeta `windows` y pegar allí las fuentes.  
    *(También puedes hacerlo usando el otro panel en lugar de crear una pestaña).*
 
 #### 2. Usando **Double Commander (GTK o QT)**
 
-1.) Instalar Double Commander:
+**a.)** Instalar Double Commander:  
 
 ```bash
 sudo apt install doublecmd-gtk
@@ -240,7 +241,7 @@ o si usas KDE Plasma o LXQT:
 sudo apt install doublecmd-qt
 ```
 
-2.) Ejecutar Double Commander con permisos de superusuario:
+**b.)** Ejecutar Double Commander con permisos de superusuario:  
 
 ```bash
 sudo doublecmd-gtk
@@ -252,7 +253,7 @@ o:
 sudo doublecmd-qt
 ```
 
-3.) Copiar las fuentes a `/usr/share/fonts/truetype/windows`.
+**c.)** Copiar las fuentes a `/usr/share/fonts/truetype/windows`.  
 
 ## Consejos para usar el administrador de archivos como superusuario
 
@@ -320,7 +321,8 @@ Este cambio fue adoptado gradualmente, y **`fontconfig` desde versiones modernas
 
 
 ## 📌 Opcional: Instalar una GUI para gestionar fuentes
-Si quieres ver, activar o desactivar fuentes fácilmente, instala **Fontmatrix**:  
+Si quieres ver, activar o desactivar fuentes fácilmente, instala **Fontmatrix**: 
+ 
 ```bash
 sudo apt install fontmatrix
 ```
