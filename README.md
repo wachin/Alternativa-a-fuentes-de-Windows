@@ -4,7 +4,7 @@ Este tutorial es para instalar fuentes gratuitas en Linux que sean una alternati
 La siguiente es una tabla donde están indicandos los usos típicos en documentos de fuentes tipográficas alternativas a las privativas de microsoft:
 
 
-|  **Fuente de Windows**   |                                            **Alternativa de Software Libre**                                            |                    **Uso Común en Documentos**                     |                                      **Notas**                                       |
+|  **Fuente de Windows**   |                                             **Alternativas no privativas**                                              |                    **Uso Común en Documentos**                     |                                      **Notas**                                       |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
 | **Arial**                | **Free Sans** / **Liberation Sans** / **Nimbus Sans** / **IBM plex Sans** / **Ubuntu Sans**                             | Cuerpo de texto, títulos, subtítulos                               | Fuente sans-serif estándar y versátil.                                               |
 | **Times New Roman**      | **Free Serif / Liberation Serif / Nimbus Roman / IBM plex serif**                                                       | Cuerpo de texto, informes formales, libros                         | Fuente serif clásica para documentos profesionales.                                  |
@@ -111,7 +111,7 @@ https://fonts.google.com/specimen/EB+Garamond
 El siguiente enlace es un ejemplo del archivo zip que contiene las fuentes en .ttf:  
 [https://github.com/be5invis/Iosevka/releases/download/v32.5.0/PkgTTF-Iosevka-32.5.0.zip](https://github.com/be5invis/Iosevka/releases/download/v32.5.0/PkgTTF-Iosevka-32.5.0.zip)  
 
-# Instalación de fuentes tipográficas de Windows en Linux
+# Instalación de fuentes tipográficas en Linux
 
 En muchas guías antiguas se recomienda copiar las fuentes de Windows a la carpeta personal `~/.fonts`.  
 Esto **sigue siendo funcional en 2025**, pero el archivo de configuración de Fontconfig en Debian 12:
@@ -135,6 +135,59 @@ Esto significa que `~/.fonts` **será removida en el futuro**, y la ubicación r
 
 Por lo tanto, si instalas fuentes solo para tu usuario, es mejor usar esa ruta recomendada para ya ir acostumbrandose
 
+## Instalar fuentes solo para tu usuario (sin tocar el sistema)
+
+Para instalar fuentes tipográficas solo para tu cuenta de usuario, puedes guardarlas en la carpeta recomendada:
+
+```
+~/.local/share/fonts
+```
+
+> **Nota:** El símbolo `~` representa tu carpeta personal (por ejemplo: `/home/tuusuario/`).
+
+### 1. Crear la carpeta automáticamente (método rápido)
+Abre una terminal y escribe el siguiente comando:  
+
+```bash
+mkdir -p ~/.local/share/fonts
+```
+
+Este comando crea toda la ruta necesaria.
+
+* La opción `-p` hace que **se creen las carpetas que falten** sin dar errores si ya existen.
+
+### 2. Crear la carpeta manualmente (sin usar la terminal)
+
+Si prefieres hacerlo de forma gráfica:
+
+1.) Abre tu **administrador de archivos**.
+2.) Presiona `Ctrl + H` para mostrar las **carpetas ocultas** (en Linux las carpetas que empiezan con un punto `.` son ocultas).
+3.) Si no existe la carpeta `.local`, créala:
+
+   * Clic derecho → **Crear carpeta** → escribir `.local`
+4.) Dentro de `.local`, crea otra carpeta llamada `share`.
+5.) Dentro de `share`, crea otra carpeta llamada `fonts`.
+
+La ruta final debe quedar así:
+
+```
+/home/tuusuario/.local/share/fonts
+```
+
+### 3. Copiar las fuentes
+
+Copia todos los archivos de fuentes de Windows (`.ttf` o `.otf`) y pégalos en esa carpeta.
+Puedes crear subcarpetas dentro de `fonts` si quieres organizar tus fuentes (por ejemplo: `windows`, `personales`, etc.).
+
+---
+
+### Ventajas de este método
+
+* No necesitas permisos de administrador.
+* Las fuentes se aplican solo a tu usuario (otros usuarios del sistema no las verán).
+* Es la forma recomendada actualmente (la carpeta antigua `~/.fonts` sigue funcionando, pero está marcada para eliminarse en el futuro).
+
+
 ## Instalación de fuentes para todo el sistema
 
 Si el equipo tiene **varios usuarios** y todos necesitan las fuentes de Windows, se deben instalar **para todo el sistema**.
@@ -151,11 +204,11 @@ Podemos crear una carpeta nueva, por ejemplo:
 
 y dentro de ella pegar todas las fuentes de Windows.
 
-## ¿Cómo copiar las fuentes sin usar la terminal?
+### ¿Cómo copiar las fuentes sin usar la terminal?
 
 Para mover archivos a esa carpeta necesitamos permisos de administrador. Hay varias formas de hacerlo gráficamente:
 
-### 1. Usando **Krusader**
+#### 1. Usando **Krusader**
 
 1.) Instalar Krusader (si no lo tiene):
 
@@ -173,7 +226,7 @@ sudo krusader
 4.)Abrir una pestaña con `Ctrl + T` e ir a `/usr/share/fonts/truetype/`, crear la carpeta `windows` y pegar allí las fuentes.
    *(También puedes hacerlo usando el otro panel en lugar de crear una pestaña).*
 
-### 2. Usando **Double Commander (GTK o QT)**
+#### 2. Usando **Double Commander (GTK o QT)**
 
 1.) Instalar Double Commander:
 
@@ -217,6 +270,11 @@ Después de copiar las fuentes, se recomienda actualizar el caché de fuentes:
 sudo fc-cache -fv
 ```
 
+### Verificar la instalación
+
+Abre un programa como LibreOffice, GIMP o Inkscape y revisa si aparecen las fuentes recién agregadas.
+
+
 ### 🔁 ¿Cuándo sí se necesita `fc-cache -fv`?
 
 1. **Cuando instalas fuentes en directorios no estándar**, como uno que creaste manualmente o no es reconocido automáticamente.
@@ -254,94 +312,14 @@ A partir de las **especificaciones de XDG** (X Desktop Group), las distribucione
 * Los datos del usuario se almacenan en `~/.local/share/`
 * Por tanto, las **fuentes por usuario** se instalan en:
 
-  ```
-  ~/.local/share/fonts
-  ```
+```
+~/.local/share/fonts
+```
 
 Este cambio fue adoptado gradualmente, y **`fontconfig` desde versiones modernas (como la que trae Debian 12)** reconoce y monitorea automáticamente esa ruta como válida para fuentes.
 
 
-## Cómo instalar Fuentes TrueType de Windows en Linux
-
-Si tienes una copia de Windows puedes entrar en la sesión de Windows y copiar las fuentes ubicadas en:
-
- `C:\Windows\Fonts`
-
-y pegarlas en un pendrive una carpeta creada con tal fin.
-
-También si tienes Dual Boot o si usas un Pendrive con Linux portable puedes Inicia sesión en Linux y Copia los archivos de fuentes (`.ttf`) desde `C:\Windows\Fonts` 
-
-- Luego **Crea un directorio para las fuentes** (por ejemplo, en tu home) Para ver los archivos ocultos usa Ctrl + H para ver los archivos ocultos:
-
-.fonts/windows_fonts
-
-esto para el usuario actual
-
-o
-
-`/usr/share/fonts/windows_fonts`
-
-para todos los usuarios, pero deberás hacer esto como superusuario
-
-   - **Copia todos los archivos TTF, OTF y TTC**
-
-puedes hacerlo con tu administrador de archivos favorito como Thunar, Nemo, Nautilus, Dolphin, etc
-
-   - **Ignora los archivos `.fon`**, ya que no funcionarán, o borralos después.
-  
-   - **Actualiza la caché de fuentes (opcional)**:
-     ```bash
-     fc-cache -fv
-     ```
-Actualizar la cache es opcional pues los programas después de cerrarlos y abrirlos otra vez reconocerán las fuentes nuevas.
-
----
-
-La mayoría de las fuentes que has copiado desde Windows 10 **funcionarán en Linux Debian**, pero hay algunas consideraciones importantes según el formato de los archivos:
-
----
-
-### 1. Formatos compatibles en Linux:
-   - **TTF (TrueType Font)**: Sí, son totalmente compatibles.
-   - **OTF (OpenType Font)**: También son compatibles.
-   - **TTC (TrueType Collection)**: Son archivos que contienen múltiples fuentes en un solo archivo. Linux puede manejarlos, pero a veces requieren herramientas como `fontforge` para extraer las fuentes individuales y que funcionen.
-   - **FON (Windows Bitmap Font)**: **No son compatibles directamente**. Son fuentes bitmap antiguas de Windows y no funcionarán bien en Linux (ej: `app850.fon`, `coure.fon`, `modern.fon`, `roman.fon`, `script.fon`, `smalle.fon`, `sserife.fon`, `vga850.fon`, `vgafix.fon`, `vgasys.fon`).
-
----
-
-### 2. Fuentes que NO funcionarán bien o requieren conversión:
-   - Los archivos `.fon` (como `app850.fon`, `coure.fon`, etc.) **no son útiles en Linux**. Estas fuentes son específicas de Windows y no se renderizan correctamente en entornos Linux modernos.
-   - Algunos archivos `.ttc` (como `cambria.ttc`, `mingliub.ttc`, etc.) pueden requerir extracción de sus componentes con herramientas como `fontforge` para usarlos individualmente.
-
----
-
-### 3. Verificación:
-   - Usa herramientas como `gnome-font-viewer`,  `fontmatrix` o `font-manager` para confirmar que las fuentes se reconocen.
-  
----
-
-### 4. Notas adicionales:
-   - **Licencias**: Algunas fuentes de Windows (como Calibri, Cambria, Segoe UI) son propiedad de Microsoft.
-   - **Fuentes TTC**: Si necesitas extraer fuentes individuales de un archivo `.ttc`, instala `fontforge`:
-     ```bash
-     sudo apt install fontforge
-     ```
-     Luego ábrelo, carga el `.ttc` y guárdalas como archivos `.ttf` separados.
-
----
-
-### Resumen:
-- **Funcionarán**: Todos los archivos `.ttf`, `.otf` y algunos `.ttc` (con herramientas).
-- **No funcionarán**: Los archivos `.fon`
-- **Recomendación**: Elimina los archivos `.fon` y usa las fuentes TTF/OTF restantes.
-
-   - Luego actualiza la caché de fuentes con:
-    ```bash
-    fc-cache -fv
-    ```
----
-
-### 📌 Opcional: Instalar una GUI para gestionar fuentes
+## 📌 Opcional: Instalar una GUI para gestionar fuentes
 Si quieres ver, activar o desactivar fuentes fácilmente, instala **Fontmatrix**:  
 ```bash
 sudo apt install fontmatrix
@@ -362,13 +340,16 @@ y pon ejemplo:
 
 **10**
 
-este número es un ejemplo y depende de cómo se vean las fuentes en tu monitor. Dda clic en Close y además cierra Fontmatrix y vuelvelo a abrir y se verá el cambio:
+este número es un ejemplo y depende de cómo se vean las fuentes en tu monitor. Da clic en Close y además cierra Fontmatrix y vuelvelo a abrir y se verá el cambio
 
-[https://facilitarelsoftwarelibre.blogspot.com/2025/02/instalar-fontmatrix-y-configurarlo-en-debian-12.html](https://facilitarelsoftwarelibre.blogspot.com/2025/02/instalar-fontmatrix-y-configurarlo-en-debian-12.html)
+También puedes ver mi tutorial:
+
+**Instalar FontMatrix y configurarlo en Debian 12**  
+[https://facilitarelsoftwarelibre.blogspot.com/2025/02/instalar-fontmatrix-y-configurarlo-en-debian-12.html](https://facilitarelsoftwarelibre.blogspot.com/2025/02/instalar-fontmatrix-y-configurarlo-en-debian-12.html)  
 
 ---
 
-### Consejos adicionales:
+## Consejos adicionales
 - Si compartes documentos con usuarios de Windows sólo usa fuentes de Windows para asegurarte que se abran en otro ordenador, ejemplo cuando una persona está haciendo una tesis y debe compartir archivos con otros estudiantes, o cuando vas a hacer imprimir algún archivo de diseño gráfico como puede ser un .svg convertido en pdf y lo lleves a hacer imprimir a una imprenta. O cualquier archivo que lo vayas a habrir en otro ordenador cerciorate que la fuente esté allí también o llevala en un pendrive e instalalas en ese ordenador para que se puedan visualizar.
 
 # Referencias

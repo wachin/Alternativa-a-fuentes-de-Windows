@@ -156,6 +156,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    fonts-hack fonts-inconsolata fonts-uralic <span class="dt">\</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    fonts-urw-base35 fonts-bpg-georgian fonts-comic-neue <span class="dt">\</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    fonts-goudybookletter fonts-ibm-plex</span></code></pre></div>
+<p><strong>Nota:</strong> Para instalar el paquete fonts-ibm-plex debe
+estar el repositorio contrib el cual hay que <a
+href="https://facilitarelsoftwarelibre.blogspot.com/search/label/Descargar%20Debian">añadirlo
+en Debian</a> si lo usas.</p>
 <p>Entre las que se intalan, hay algunos paquetes que instalan varias
 fuentes con diferentes tipos y diferentes nombres:</p>
 <p><strong>fonts-liberation =</strong> Liberation Sans, Liberation
@@ -245,7 +249,8 @@ configuración de Fontconfig en Debian 12:</p>
 class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dir</span><span class="ot"> prefix=</span><span class="st">&quot;xdg&quot;</span>&gt;fonts&lt;/<span class="kw">dir</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- the following element will be removed in the future --&gt;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dir</span>&gt;~/.fonts&lt;/<span class="kw">dir</span>&gt;</span></code></pre></div>
-<p><img src="vx_images/338398966727171.png" /></p>
+<p><img
+src="https://blogger.googleusercontent.com/img/a/AVvXsEizJKqIR0EABs9Adxy82JnefqzQaC_4UfN0ymDV4Pqr4IkBVoDycNYVY14F4Z53rgbkbZhQaSLZYLHQ03JWPixHhGMy_Yj_A7l2B-VprbbkBPBRFCSrEeb6nMXyq7P8rppyg1SiAKSUZjpz7o-UROxj_fbfGCpWc3ZLDImXiMLUB2chSYIoc225HnlJohc=s16000-rw" /></p>
 <p>Esto significa que <code>~/.fonts</code> <strong>será removida en el
 futuro</strong>, y la ubicación recomendada según el estándar
 <strong>XDG Base Directory</strong> es:</p>

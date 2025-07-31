@@ -119,7 +119,7 @@ def crear_gui():
     label_fuente.pack(pady=5)
     
     entry_fuente = tk.Entry(root)
-    entry_fuente.insert(0, "90%")  # Valor por defecto
+    entry_fuente.insert(0, "100%")  # Valor por defecto
     entry_fuente.pack(pady=5)
     
     boton_procesar = tk.Button(root, text="Seleccionar archivo HTML", command=lambda: procesar_archivo(entry_fuente))
