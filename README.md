@@ -38,6 +38,8 @@ sudo apt install fonts-liberation fonts-freefont-ttf fonts-crosextra-carlito \
     fonts-goudybookletter fonts-ibm-plex
 ```
 
+**Nota:** Para instalar el paquete fonts-ibm-plex debe estar el repositorio contrib el cual hay que [añadirlo en Debian](https://facilitarelsoftwarelibre.blogspot.com/search/label/Descargar%20Debian) si lo usas. 
+
 Entre las que se intalan, hay algunos paquetes que instalan varias fuentes con diferentes tipos y diferentes nombres:
 
 **fonts-liberation =** Liberation Sans, Liberation Serif  
@@ -123,8 +125,7 @@ indica claramente:
 <!-- the following element will be removed in the future -->
 <dir>~/.fonts</dir>
 ```
-![](vx_images/338398966727171.png)
-
+![](https://blogger.googleusercontent.com/img/a/AVvXsEizJKqIR0EABs9Adxy82JnefqzQaC_4UfN0ymDV4Pqr4IkBVoDycNYVY14F4Z53rgbkbZhQaSLZYLHQ03JWPixHhGMy_Yj_A7l2B-VprbbkBPBRFCSrEeb6nMXyq7P8rppyg1SiAKSUZjpz7o-UROxj_fbfGCpWc3ZLDImXiMLUB2chSYIoc225HnlJohc=s16000-rw)
 
 Esto significa que `~/.fonts` **será removida en el futuro**, y la ubicación recomendada según el estándar **XDG Base Directory** es:
 
