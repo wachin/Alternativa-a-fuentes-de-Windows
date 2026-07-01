@@ -122,10 +122,10 @@ El siguiente enlace es un ejemplo del archivo zip que contiene las fuentes en .t
 Si quieres descargar de una sola vez estas fuentes, las tengo en un repositorio, simplemente pon en a terminal:
 
 ```bash
-mkdir ~/.fonts
-cd ~/.fonts
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
 git clone https://github.com/wachin/Alternativa-a-fuentes-de-Windows
-rm -fr ~/.fonts/Alternativa-a-fuentes-de-Windows/.git
+rm -fr ~/.local/share/fonts/Alternativa-a-fuentes-de-Windows/.git
 ```
 
 **Nota:** El ultimo comando "rm -fr ..." es para borrar el lugar donde está el duplicado del repositorio que gestiona los archivos en github, pues no tiene sentido que ocupe espacio allí por gusto
