@@ -1,5 +1,5 @@
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirrN7IkvUf7w97QGE4geWEGLzqzw3PkuE0IohXXxqNAb3gaKltDEDdl0PMwVOC2vpXPBTCoi6NqVtHxAjNYnj-CfOx0CQuezkEu8R1k7w3QPciMGcuf8VI2hXRSg2rDC_ioPhNkKAuPgcBcVrIaXtjpGsBSEQnY39wPo7gUW9kw5n4Ef5UizAXOr9JOl4/s1536/Portada.jpg =640x)
 
+![](vx_images/Front_Page.jpg)
 # Alternative to proprietary Microsoft fonts
 
 This tutorial explains how to install free fonts on Linux that can be used as alternatives to proprietary Microsoft fonts. Some of them can be found in Linux repositories, Google Fonts, and other sources.
