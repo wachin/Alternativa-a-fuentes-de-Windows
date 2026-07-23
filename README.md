@@ -1,36 +1,36 @@
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirrN7IkvUf7w97QGE4geWEGLzqzw3PkuE0IohXXxqNAb3gaKltDEDdl0PMwVOC2vpXPBTCoi6NqVtHxAjNYnj-CfOx0CQuezkEu8R1k7w3QPciMGcuf8VI2hXRSg2rDC_ioPhNkKAuPgcBcVrIaXtjpGsBSEQnY39wPo7gUW9kw5n4Ef5UizAXOr9JOl4/s1536/Portada.jpg =640x)
 
-# Alternativa a fuentes tipográficas privativas de microsoft
+# Alternative to proprietary Microsoft fonts
 
-Este tutorial es para instalar fuentes gratuitas en Linux que sean una alternativa a las fuentes tipográficas privativas de microsoft, algunas de ellas se las puede encontrar en los repositorios de Linux o en Google Fonts y otros
+This tutorial explains how to install free fonts on Linux that can be used as alternatives to proprietary Microsoft fonts. Some of them can be found in Linux repositories, Google Fonts, and other sources.
 
-La siguiente es una tabla donde están indicandos los usos típicos en documentos de fuentes tipográficas alternativas a las privativas de microsoft:
+The following table lists typical document uses for free alternatives to proprietary Microsoft fonts:
 
    
-|  **Fuente de Windows**   |                                             **Alternativas no privativas**                                              |                    **Uso Común en Documentos**                     |                                      **Notas**                                       |
+|  **Windows Font**        |                                             **Non-Proprietary Alternatives**                                             |                    **Common Use in Documents**                     |                                      **Notes**                                       |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| **Arial**                | **Free Sans** / **Liberation Sans** / **Nimbus Sans** / **IBM plex Sans** / **Ubuntu Sans**                             | Cuerpo de texto, títulos, subtítulos                               | Fuente sans-serif estándar y versátil.                                               |
-| **Times New Roman**      | **Free Serif / Liberation Serif / Nimbus Roman / IBM plex serif**                                                       | Cuerpo de texto, informes formales, libros                         | Fuente serif clásica para documentos profesionales.                                  |
-| **Courier New**          | **FreeMono / Liberation Mono**                                                                                          | Código, documentos técnicos, textos monoespaciados                 | Fuente monoespaciada usada en programación y tabulación.                             |
-| **Calibri**              | **Carlito** / **Lato**                                                                                                  | Cuerpo de texto, presentaciones                                    | Fuente moderna y legible.                                                            |
-| **Cambria**              | **Caladea / Cambo**                                                                                                     | Cuerpo de texto, informes formales                                 | Similar a Times New Roman, con mejor legibilidad en pantalla.                        |
-| **Comic Sans MS**        | **Comic Neue**                                                                                                          | Usada en textos informales, educativos y presentaciones infantiles | Comic Neue es más refinada.                                                          |
-| **Verdana**              | **DejaVu Sans**                                                                                                         | Cuerpo de texto, páginas web, interfaces gráficas                  | Excelente legibilidad en pantallas.                                                  |
-| **Georgia**              | **Gelasio**                                                                                                             | Cuerpo de texto, títulos de documentos                             | Fuente serif con buena legibilidad en pantalla.                                      |
-| **Trebuchet MS**         | **Fira Sans**                                                                                                           | Títulos, subtítulos, presentaciones                                | Alternativa con un diseño limpio y moderno.                                          |
-| **Impact**               | **Anton** / **Oswald**                                                                                                  | Títulos llamativos                                                 | Anton es una alternativa con un impacto visual fuerte.                               |
-| **Tahoma**               | **Signika**                                                                                                             | Cuerpo de texto en interfaces gráficas y documentos empresariales  | Similar en espaciado y claridad.                                                     |
-| **Palatino Linotype**    | **Source Serif 4**                                                                                                      | Libros, ensayos, textos académicos                                 | Basado en el diseño de Palatino.                                                     |
-| **Book Antiqua**         | **P052 / C059**                                                                                                         | Cuerpo de texto en documentos elegantes o clásicos                 | Alternativas clásicas con estilo refinado.                                           |
-| **Franklin Gothic Book** | **Libre Franklin**                                                                                                      | Títulos, carteles, encabezados                                     | Fuente sans-serif gruesa con estilo fuerte.                                          |
-| **Century Gothic**       | **URW Gothic**                                                                                                          | Títulos modernos, diseño gráfico                                   | Diseño limpio y futurista.                                                           |
-| **Rockwell**             | **Arvo**                                                                                                                | Títulos con impacto visual                                         | Alternativas de estilo slab-serif.                                                   |
-| **Baskerville**          | **Goudy Bookletter 1911**                                                                                               | Cuerpo de texto en documentos clásicos y elegantes                 | Fuente con excelente legibilidad impresa.                                            |
-| **Consolas**             | **JetBrains Mono** / **DejaVu Sans Mono** / **Fira Code** / **Hack** / **Iosevka** / **Victor Mono** /**Fragment Mono** | Código de programación, terminales, documentos técnicos            | Consolas es monoespaciada, sus alternativas tienen soporte para ligaduras de código. |
+| **Arial**                | **Free Sans** / **Liberation Sans** / **Nimbus Sans** / **IBM Plex Sans** / **Ubuntu Sans**                             | Body text, headings, subheadings                                   | Standard and versatile sans-serif font.                                              |
+| **Times New Roman**      | **Free Serif / Liberation Serif / Nimbus Roman / IBM Plex Serif**                                                       | Body text, formal reports, books                                   | Classic serif font for professional documents.                                       |
+| **Courier New**          | **FreeMono / Liberation Mono**                                                                                          | Code, technical documents, monospaced text                         | Monospaced font used in programming and tabular text.                                 |
+| **Calibri**              | **Carlito** / **Lato**                                                                                                  | Body text, presentations                                           | Modern and readable font.                                                            |
+| **Cambria**              | **Caladea / Cambo**                                                                                                     | Body text, formal reports                                          | Similar to Times New Roman, with better on-screen readability.                       |
+| **Comic Sans MS**        | **Comic Neue**                                                                                                          | Informal, educational, and children's presentation text             | Comic Neue is more refined.                                                          |
+| **Verdana**              | **DejaVu Sans**                                                                                                         | Body text, web pages, graphical interfaces                         | Excellent screen readability.                                                        |
+| **Georgia**              | **Gelasio**                                                                                                             | Body text, document headings                                       | Serif font with good screen readability.                                             |
+| **Trebuchet MS**         | **Fira Sans**                                                                                                           | Headings, subheadings, presentations                               | Alternative with a clean, modern design.                                             |
+| **Impact**               | **Anton** / **Oswald**                                                                                                  | Eye-catching headings                                              | Anton is an alternative with strong visual impact.                                   |
+| **Tahoma**               | **Signika**                                                                                                             | Body text in graphical interfaces and business documents            | Similar spacing and clarity.                                                         |
+| **Palatino Linotype**    | **Source Serif 4**                                                                                                      | Books, essays, academic texts                                      | Based on the Palatino design.                                                        |
+| **Book Antiqua**         | **P052 / C059**                                                                                                         | Body text in elegant or classic documents                          | Classic alternatives with a refined style.                                           |
+| **Franklin Gothic Book** | **Libre Franklin**                                                                                                      | Headings, posters, headers                                         | Heavy sans-serif font with a strong style.                                           |
+| **Century Gothic**       | **URW Gothic**                                                                                                          | Modern headings, graphic design                                    | Clean and futuristic design.                                                         |
+| **Rockwell**             | **Arvo**                                                                                                                | Headings with visual impact                                        | Slab-serif style alternatives.                                                       |
+| **Baskerville**          | **Goudy Bookletter 1911**                                                                                               | Body text in classic and elegant documents                         | Font with excellent print readability.                                               |
+| **Consolas**             | **JetBrains Mono** / **DejaVu Sans Mono** / **Fira Code** / **Hack** / **Iosevka** / **Victor Mono** / **Fragment Mono** | Programming code, terminals, technical documents                   | Consolas is monospaced; its alternatives support code ligatures.                     |
 
-## Instalación de las fuentes libres desde repositorios Linux (Debian/MX Linux/Ubuntu, etc)
+## Installing free fonts from Linux repositories (Debian/MX Linux/Ubuntu, etc.)
 
-Instala las fuentes libres directamente desde los repositorios con este comando:
+Install the free fonts directly from the repositories with this command:
 
 ```bash
 sudo apt install fonts-liberation fonts-freefont-ttf fonts-crosextra-carlito \
@@ -41,19 +41,19 @@ sudo apt install fonts-liberation fonts-freefont-ttf fonts-crosextra-carlito \
     fonts-goudybookletter fonts-ibm-plex
 ```
 
-**Nota:** Para instalar el paquete fonts-ibm-plex debe estar el repositorio contrib el cual hay que [añadirlo en Debian](https://facilitarelsoftwarelibre.blogspot.com/search/label/Descargar%20Debian) si lo usas.
+**Note:** To install the `fonts-ibm-plex` package, the `contrib` repository must be enabled. If you use Debian, you need to [add it](https://facilitarelsoftwarelibre.blogspot.com/search/label/Descargar%20Debian).
 
-Entre las que se intalan, hay algunos paquetes que instalan varias fuentes con diferentes tipos y diferentes nombres:
+Among the installed packages, some install several fonts with different types and names:
 
 **fonts-liberation =** Liberation Sans, Liberation Serif  
 **fonts-freefont-ttf =** FreeMono  
-**fonts-crosextra-carlito** = carlito  
-**fonts-crosextra-caladea** = caladea  
+**fonts-crosextra-carlito** = Carlito  
+**fonts-crosextra-caladea** = Caladea  
 **fonts-dejavu =** DejaVu Sans, DejaVu Sans Mono  
 **fonts-cantarell =** Cantarell  
 **fonts-ebgaramond =** EB Garamond (08, 12)  
 **fonts-ebgaramond-extra =** EB Garamond SC (08, 12), EB Garamond 12 All SC  
-**fonts-ibm-plex =** IBM Plex Sans, IBM plex Serif, IBM plex Mono  
+**fonts-ibm-plex =** IBM Plex Sans, IBM Plex Serif, IBM Plex Mono  
 **fonts-hack =** Hack  
 **fonts-inconsolata =** Inconsolata  
 **fonts-urw-base35 =** Nimbus Roman, Nimbus Sans, URW Gothic, URW Bookman, C059, P052  
@@ -62,36 +62,36 @@ Entre las que se intalan, hay algunos paquetes que instalan varias fuentes con d
 
 * * *
 
-## Fuentes alternativas desde Google Fonts
+## Alternative fonts from Google Fonts
 
-Algunas fuentes no están en los repositorios, están en este repositorio, pero puedes descargarlas manualmente desde [Google Fonts](https://fonts.google.com/):
+Some fonts are not in the repositories. They are in this repository, but you can also download them manually from [Google Fonts](https://fonts.google.com/):
 
-Busca la fuente y descárgala (`.zip` con archivos `.ttf` o `.otf`).
+Search for the font and download it (`.zip` with `.ttf` or `.otf` files).
 
-**Nota:** Tengo un respaldo en: [https://github.com/wachin/Alternativa-a-fuentes-de-Windows](https://github.com/wachin/Alternativa-a-fuentes-de-Windows)  
+**Note:** I have a backup at: [https://github.com/wachin/Alternativa-a-fuentes-de-Windows](https://github.com/wachin/Alternativa-a-fuentes-de-Windows)  
 
-**Slavo 27px → Alternativa a Rockwell**  
+**Slabo 27px -> Alternative to Rockwell**  
 [https://fonts.google.com/specimen/Slabo+27px](https://fonts.google.com/specimen/Slabo+27px)
 
-**EB Garamond → Alternativa a Garamond**  
+**EB Garamond -> Alternative to Garamond**  
 https://fonts.google.com/specimen/EB+Garamond
 
-**Libre Franklin → Alternativa a Franklin Gothic**  
+**Libre Franklin -> Alternative to Franklin Gothic**  
 [https://fonts.google.com/specimen/Libre+Franklin](https://fonts.google.com/specimen/Libre+Franklin)
 
-**Oswald → Alternativa a Impact**  
+**Oswald -> Alternative to Impact**  
 [https://fonts.google.com/specimen/Oswald](https://fonts.google.com/specimen/Oswald)
 
-**Anton → Alternativa a Impact**  
+**Anton -> Alternative to Impact**  
 [https://fonts.google.com/specimen/Anton](https://fonts.google.com/specimen/Anton)
 
-**Arvo → Alternativa a Rockwell**  
+**Arvo -> Alternative to Rockwell**  
 [https://fonts.google.com/specimen/Arvo](https://fonts.google.com/specimen/Arvo)
 
-**Source Serif 4 → Alternativa a Georgia**  
+**Source Serif 4 -> Alternative to Georgia**  
 [https://fonts.google.com/specimen/Source+Serif+4](https://fonts.google.com/specimen/Source+Serif+4)
 
-**Lato → Alternativa a Calibri**  
+**Lato -> Alternative to Calibri**  
 [https://fonts.google.com/specimen/Lato](https://fonts.google.com/specimen/Lato)
 
 **Cambo**  
@@ -100,26 +100,26 @@ https://fonts.google.com/specimen/EB+Garamond
 **Fira Sans**  
 [https://fonts.google.com/specimen/Fira+Sans](https://fonts.google.com/specimen/Fira+Sans)
 
-**Victor Mono → Alternativa a Consolas**  
+**Victor Mono -> Alternative to Consolas**  
 [https://fonts.google.com/specimen/Victor+Mono](https://fonts.google.com/specimen/Victor+Mono)
 
-**Fragment Mono → Alternativa a Consolas**  
+**Fragment Mono -> Alternative to Consolas**  
 [https://fonts.google.com/specimen/Fragment+Mono](https://fonts.google.com/specimen/Fragment+Mono)
 
-**Gelasio → Alternativa a Georgia**  
+**Gelasio -> Alternative to Georgia**  
 [https://fonts.google.com/specimen/Gelasio](https://fonts.google.com/specimen/Gelasio)
 
 **Signika**  
 [https://fonts.google.com/specimen/Signika](https://fonts.google.com/specimen/Signika)
 
-**Iosevka → Alternativa a Consolas**  
+**Iosevka -> Alternative to Consolas**  
 [https://github.com/be5invis/Iosevka/releases](https://github.com/be5invis/Iosevka/releases)  
-El siguiente enlace es un ejemplo del archivo zip que contiene las fuentes en .ttf:  
+The following link is an example of a zip file that contains the fonts in `.ttf` format:  
 [https://github.com/be5invis/Iosevka/releases/download/v32.5.0/PkgTTF-Iosevka-32.5.0.zip](https://github.com/be5invis/Iosevka/releases/download/v32.5.0/PkgTTF-Iosevka-32.5.0.zip)
 
-### Descargar estas fuetnes desde Google Fonts de una sola vez desde mi Repositorio
+### Download these fonts from Google Fonts all at once from my repository
 
-Si quieres descargar de una sola vez estas fuentes, las tengo en un repositorio, simplemente pon en a terminal:
+If you want to download all these fonts at once, I have them in a repository. Just enter this in the terminal:
 
 ```bash
 mkdir -p ~/.local/share/fonts
@@ -128,16 +128,16 @@ git clone https://github.com/wachin/Alternativa-a-fuentes-de-Windows
 rm -fr ~/.local/share/fonts/Alternativa-a-fuentes-de-Windows/.git
 ```
 
-**Nota:** El ultimo comando "rm -fr ..." es para borrar el lugar donde está el duplicado del repositorio que gestiona los archivos en github, pues no tiene sentido que ocupe espacio allí por gusto
+**Note:** The last command, `rm -fr ...`, deletes the duplicated repository metadata that manages the files on GitHub, because there is no point in wasting space there unnecessarily.
 
-# Instalación de fuentes tipográficas en Linux
+# Installing fonts in Linux
 
-En muchas guías antiguas se recomienda copiar las fuentes de Windows a la carpeta personal `~/.fonts`.  
-Esto **sigue siendo funcional en 2025**, pero el archivo de configuración de Fontconfig en Debian 12:
+Many old guides recommend copying Windows fonts to the personal `~/.fonts` folder.  
+This **still works in 2025**, but the Fontconfig configuration file in Debian 12:
 
 /etc/fonts/fonts.conf
 
-indica claramente:
+clearly states:
 
 ```bash
 <dir prefix="xdg">fonts</dir>
@@ -147,224 +147,226 @@ indica claramente:
 
 ![](https://blogger.googleusercontent.com/img/a/AVvXsEizJKqIR0EABs9Adxy82JnefqzQaC_4UfN0ymDV4Pqr4IkBVoDycNYVY14F4Z53rgbkbZhQaSLZYLHQ03JWPixHhGMy_Yj_A7l2B-VprbbkBPBRFCSrEeb6nMXyq7P8rppyg1SiAKSUZjpz7o-UROxj_fbfGCpWc3ZLDImXiMLUB2chSYIoc225HnlJohc=s16000-rw)
 
-Esto significa que `~/.fonts` **será removida en el futuro**, y la ubicación recomendada según el estándar **XDG Base Directory** es:
+This means that `~/.fonts` **will be removed in the future**, and the recommended location according to the **XDG Base Directory** standard is:
 
 ```
 ~/.local/share/fonts
 ```
 
-Por lo tanto, si instalas fuentes solo para tu usuario, es mejor usar esa ruta recomendada para ya ir acostumbrandose
+Therefore, if you install fonts only for your user, it is better to use that recommended path and start getting used to it.
 
-## Instalar fuentes solo para tu usuario (sin tocar el sistema)
+## Install fonts only for your user (without touching the system)
 
-Para instalar fuentes tipográficas solo para tu cuenta de usuario, puedes guardarlas en la carpeta recomendada:
+To install fonts only for your user account, you can save them in the recommended folder:
 
 ```
 ~/.local/share/fonts
 ```
 
-> **Nota:** El símbolo `~` representa tu carpeta personal (por ejemplo: `/home/tuusuario/`).
+> **Note:** The `~` symbol represents your home folder, for example: `/home/youruser/`.
 
-### 1. Crear la carpeta automáticamente (método rápido)
+### 1. Create the folder automatically (quick method)
 
-Abre una terminal y escribe el siguiente comando:
+Open a terminal and type the following command:
 
 ```bash
 mkdir -p ~/.local/share/fonts
 ```
 
-Este comando crea toda la ruta necesaria.
+This command creates the entire required path.
 
--   La opción `-p` hace que **se creen las carpetas que falten** sin dar errores si ya existen.
+-   The `-p` option makes it **create any missing folders** without throwing errors if they already exist.
 
-### 2. Crear la carpeta manualmente (sin usar la terminal)
+### 2. Create the folder manually (without using the terminal)
 
-Si prefieres hacerlo de forma gráfica:
+If you prefer to do it graphically:
 
-1.  Abre tu **administrador de archivos**.  
+1.  Open your **file manager**.  
     
-2.  Presiona `Ctrl + H` para mostrar las **carpetas ocultas** (en Linux las carpetas que empiezan con un punto `.` son ocultas).  
+2.  Press `Ctrl + H` to show **hidden folders** (in Linux, folders that start with a dot `.` are hidden).  
     
-3.  Si no existe la carpeta `.local`, créala:
+3.  If the `.local` folder does not exist, create it:
     
-    -   Clic derecho → **Crear carpeta** → escribir `.local`  
+    -   Right click -> **Create Folder** -> type `.local`  
         
-4.  Dentro de `.local`, crea otra carpeta llamada `share`.  
+4.  Inside `.local`, create another folder called `share`.  
     
-5.  Dentro de `share`, crea otra carpeta llamada `fonts`.
+5.  Inside `share`, create another folder called `fonts`.
     
 
-La ruta final debe quedar así:
+The final path should look like this:
 
 ```
-/home/tuusuario/.local/share/fonts
+/home/youruser/.local/share/fonts
 ```
 
-### 3. Copiar las fuentes
+### 3. Copy the fonts
 
-Copia todos los archivos de fuentes de Windows (`.ttf` o `.otf`) y pégalos en esa carpeta. Puedes crear subcarpetas dentro de `fonts` si quieres organizar tus fuentes (por ejemplo: `windows`, `personales`, etc.).
+Copy all Windows font files (`.ttf` or `.otf`) and paste them into that folder. You can create subfolders inside `fonts` if you want to organize your fonts, for example: `windows`, `personal`, etc.
 
 * * *
 
-### Ventajas de este método
+### Advantages of this method
 
--   No necesitas permisos de administrador.
--   Las fuentes se aplican solo a tu usuario (otros usuarios del sistema no las verán).
--   Es la forma recomendada actualmente (la carpeta antigua `~/.fonts` sigue funcionando, pero está marcada para eliminarse en el futuro).
+-   You do not need administrator permissions.
+-   The fonts apply only to your user (other system users will not see them).
+-   It is the currently recommended method (the old `~/.fonts` folder still works, but it is marked for removal in the future).
 
-## Instalación de fuentes para todo el sistema
+## System-wide font installation
 
-Si el equipo tiene **varios usuarios** y todos necesitan las fuentes de Windows, se deben instalar **para todo el sistema**.
+If the computer has **several users** and everyone needs the Windows fonts, they should be installed **system-wide**.
 
-### ¿Dónde van las fuentes del sistema?
+### Where do system fonts go?
 
-Las fuentes del sistema en Linux se guardan en:
+System fonts in Linux are stored in:
 
 `/usr/share/fonts/truetype/`
 
-Podemos crear una carpeta nueva, por ejemplo:
+We can create a new folder, for example:
 
 `/usr/share/fonts/truetype/windows`
 
-y dentro de ella pegar todas las fuentes de Windows.
+and paste all Windows fonts inside it.
 
-### ¿Cómo copiar las fuentes sin usar la terminal?
+### How to copy fonts without using the terminal
 
-Para mover archivos a esa carpeta necesitamos permisos de administrador. Hay varias formas de hacerlo gráficamente:
+To move files into that folder, we need administrator permissions. There are several ways to do it graphically:
 
-#### 1. Usando **Krusader**
+#### 1. Using **Krusader**
 
-**a.)** Instalar Krusader (si no lo tiene):
+**a.)** Install Krusader (if you do not have it):
 
 ```bash
 sudo apt install krusader
 ```
 
-**b.)** Ejecutar Krusader como superusuario:
+**b.)** Run Krusader as superuser:
 
 ```bash
 sudo krusader
 ```
 
-**c.)** Navegar a la carpeta donde tienes las fuentes de Windows y copiarlas.
+**c.)** Go to the folder where you have the Windows fonts and copy them.
 
-**d.)** Abrir una pestaña con `"Ctrl + T"` e ir a `"/usr/share/fonts/truetype/"`, crear la carpeta `windows` y pegar allí las fuentes.  
-*(También puedes hacerlo usando el otro panel en lugar de crear una pestaña).*
+**d.)** Open a tab with `"Ctrl + T"` and go to `"/usr/share/fonts/truetype/"`, create the `windows` folder, and paste the fonts there.  
+*(You can also do this using the other panel instead of creating a tab.)*
 
-#### 2. Usando **Double Commander (GTK o QT)**
+#### 2. Using **Double Commander (GTK or QT)**
 
-**a.)** Instalar Double Commander (si estuviera disponible en los repositorios):
+**a.)** Install Double Commander (if it is available in the repositories):
 
 ```bash
 sudo apt install doublecmd-gtk
 ```
 
-o si usas KDE Plasma o LXQT:
+or if you use KDE Plasma or LXQT:
 
 ```bash
 sudo apt install doublecmd-qt
 ```
 
-**b.)** Ejecutar Double Commander con permisos de superusuario:
+**b.)** Run Double Commander with superuser permissions:
 
 ```bash
 sudo doublecmd-gtk
 ```
 
-o:
+or:
 
 ```bash
 sudo doublecmd-qt
 ```
 
-**c.)** Copiar las fuentes a `/usr/share/fonts/truetype/windows`.
+**c.)** Copy the fonts to `/usr/share/fonts/truetype/windows`.
 
-## Consejos para usar el administrador de archivos como superusuario
+## Tips for using the file manager as superuser
 
--   **Tenga mucho cuidado** de no borrar ni mover carpetas o archivos del sistema operativo. Si elimina o mueve algo crítico, el sistema puede dejar de funcionar y podría ser necesario reinstalarlo.
--   **No abra sus archivos personales (imágenes, documentos, etc.)** desde el administrador de archivos ejecutado como superusuario. Esto se debe a que el programa que abre esos archivos puede heredar permisos de superusuario y cambiar la propiedad de los mismos, provocando que luego no pueda acceder a ellos desde su usuario normal.
--   **Cierre el administrador de archivos cuando termine de usarlo como superusuario.** Dejarlo abierto puede ser peligroso porque, al volver más tarde y olvidar que sigue con permisos de administrador, podría borrar o mover algo importante sin darse cuenta.
+-   **Be very careful** not to delete or move operating system folders or files. If you delete or move something critical, the system may stop working and you may need to reinstall it.
+-   **Do not open your personal files (images, documents, etc.)** from the file manager running as superuser. This is because the program that opens those files may inherit superuser permissions and change their ownership, causing you to lose access to them from your normal user.
+-   **Close the file manager when you finish using it as superuser.** Leaving it open can be dangerous because, if you come back later and forget that it still has administrator permissions, you could delete or move something important without realizing it.
 
-## Actualizar el caché de fuentes (opcional)
+## Update the font cache (optional)
 
-Después de copiar las fuentes, se recomienda actualizar el caché de fuentes:
+After copying the fonts, it is recommended to update the font cache:
 
 ```bash
 sudo fc-cache -fv
 ```
 
-### Verificar la instalación
+### Verify the installation
 
-Abre un programa como LibreOffice, GIMP o Inkscape y revisa si aparecen las fuentes recién agregadas.
+Open a program such as LibreOffice, GIMP, or Inkscape and check whether the newly added fonts appear.
 
-### ¿Cuándo sí se necesita `fc-cache -fv`?
+### When is `fc-cache -fv` actually needed?
 
-1.  **Cuando instalas fuentes en directorios no estándar**, como uno que creaste manualmente o no es reconocido automáticamente.
-2.  **Cuando haces scripts automatizados o instalaciones sin sesión gráfica activa**, por ejemplo en servidores o instalaciones masivas.
-3.  **Cuando un programa específico no detecta la fuente nueva**, a pesar de reiniciarlo.
-4.  **Cuando tienes problemas con fuentes corruptas, cache antigua o conflictos**, y necesitas regenerar toda la caché de fuentes.
+1.  **When you install fonts in non-standard directories**, such as one you created manually or one that is not detected automatically.
+2.  **When you use automated scripts or installations without an active graphical session**, for example on servers or mass installations.
+3.  **When a specific program does not detect the new font**, even after restarting it.
+4.  **When you have problems with corrupt fonts, an old cache, or conflicts**, and need to regenerate the entire font cache.
 
-### Un poco de historia
+### A bit of history
 
-Durante mucho tiempo, el lugar “de facto” para instalar fuentes a nivel de usuario era:
+For a long time, the de facto location for installing fonts at the user level was:
 
--   `~/.fonts` (es decir, una carpeta `.fonts` en tu directorio personal)
+-   `~/.fonts` (that is, a `.fonts` folder in your home directory)
 
-Este método funcionaba bien y era el más documentado en distros como Debian, Ubuntu, etc., desde antes de 2010. Muchos tutoriales antiguos (y aún varios actuales 2025) siguen recomendando esta ruta.
+This method worked well and was the most documented one in distributions such as Debian, Ubuntu, etc., since before 2010. Many old tutorials (and even several current ones in 2025) still recommend this path.
 
 * * *
 
-### ¿Qué cambió?
+### What changed?
 
-A partir de las **especificaciones de XDG** (X Desktop Group), las distribuciones comenzaron a migrar a una estructura más estandarizada para los archivos de usuario. En esa estructura:
+Starting with the **XDG specifications** (X Desktop Group), distributions began migrating to a more standardized structure for user files. In that structure:
 
--   Los datos del usuario se almacenan en `~/.local/share/`
--   Por tanto, las **fuentes por usuario** se instalan en:
+-   User data is stored in `~/.local/share/`
+-   Therefore, **per-user fonts** are installed in:
 
 ```
 ~/.local/share/fonts
 ```
 
-Este cambio fue adoptado gradualmente, y **`fontconfig` desde versiones modernas (como la que trae Debian 12)** reconoce y monitorea automáticamente esa ruta como válida para fuentes.
+This change was adopted gradually, and **`fontconfig` in modern versions (such as the one included with Debian 12)** automatically recognizes and monitors that path as valid for fonts.
 
-## Opcional: Instalar una GUI para gestionar fuentes
+## Optional: Install a GUI to manage fonts
 
-Si quieres ver, activar o desactivar fuentes fácilmente, instala **Fontmatrix**:
+If you want to view, enable, or disable fonts easily, install **Fontmatrix**:
 
 ```bash
 sudo apt install fontmatrix
 ```
 
-Luego ábrelo desde el menú y revisa tus fuentes instaladas.
+**Note:** I am trying to improve this program at [fontmatrix](https://github.com/wachin/fontmatrix)
 
-Si las fuentes no se ven bien, debes configurar las fuentes visibles
+Then open it from the menu and check your installed fonts.
 
-Da clic en:
+If the fonts do not look right, you need to configure the visible fonts.
+
+Click:
 
 **Edit > Preferences**
 
-Da clic en:
+Click:
 
 **Display > Default font size**
 
-y pon ejemplo:
+and set, for example:
 
 **10**
 
-este número es un ejemplo y depende de cómo se vean las fuentes en tu monitor. Da clic en Close y además cierra Fontmatrix y vuelvelo a abrir y se verá el cambio
+This number is only an example and depends on how the fonts look on your monitor. Click Close, then close Fontmatrix and open it again so the change takes effect.
 
-También puedes ver mi tutorial:
+You can also see my tutorial:
 
-**Instalar FontMatrix y configurarlo en Debian 12**  
+**Install FontMatrix and configure it on Debian 12**  
 [https://facilitarelsoftwarelibre.blogspot.com/2025/02/instalar-fontmatrix-y-configurarlo-en-debian-12.html](https://facilitarelsoftwarelibre.blogspot.com/2025/02/instalar-fontmatrix-y-configurarlo-en-debian-12.html)
 
 * * *
 
-## Consejos adicionales
+## Additional tips
 
--   Si compartes documentos con usuarios de Windows sólo usa fuentes de Windows para asegurarte que se abran en otro ordenador, ejemplo cuando una persona está haciendo una tesis y debe compartir archivos con otros estudiantes, o cuando vas a hacer imprimir algún archivo de diseño gráfico como puede ser un .svg convertido en pdf y lo lleves a hacer imprimir a una imprenta. O cualquier archivo que lo vayas a habrir en otro ordenador cerciorate que la fuente esté allí también o llevala en un pendrive e instalalas en ese ordenador para que se puedan visualizar.
+-   If you share documents with Windows users, use only Windows fonts to make sure they open correctly on another computer. For example, this matters when someone is writing a thesis and needs to share files with other students, or when you are going to print a graphic design file, such as an `.svg` converted to PDF, at a print shop. For any file that you are going to open on another computer, make sure the font is there too, or take it on a USB flash drive and install it on that computer so it can be displayed.
 
-# Referencias
+# References
 
 **Linux Font Equivalents to Popular Web Typefaces | Jon Christopher**  
 [https://jonchristopher.us/blog/linux-font-equivalents-to-popular-web-typefaces/](https://jonchristopher.us/blog/linux-font-equivalents-to-popular-web-typefaces/)
@@ -372,8 +374,8 @@ También puedes ver mi tutorial:
 **How do I install fonts?**  
 [how-do-i-install-fonts](https://askubuntu.com/questions/3697/how-do-i-install-fonts)
 
-**Añadir una tipografía adicional para usuarios individuales**  
-[fonts-user.html.es](https://help.gnome.org/admin/system-admin-guide/stable/fonts-user.html.es)
+**Add an extra font for individual users**  
+[fonts-user.html](https://help.gnome.org/admin/system-admin-guide/stable/fonts-user.html)
 
-**Font configuration (Español)**  
-[Font\_configuration\_%28Español%29](https://wiki.archlinux.org/title/Font_configuration_%28Español%29)
+**Font configuration**  
+[Font_configuration](https://wiki.archlinux.org/title/Font_configuration)
